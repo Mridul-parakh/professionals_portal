@@ -11,14 +11,17 @@ class ProfileItem extends Component {
       online:false
     }
   }
+  
   componentDidMount(){
     if(this.props.auth.isAuthenticated){
        if(this.props.auth.user.id===this.props.profile.user._id)
         this.setState({online:true})
     }
 }
+
   render() {
-    const { profile } = this.props;
+    const  profile  = this.props.profile;
+    
   let online;
   let k="";
   if(this.state.online){
@@ -29,6 +32,7 @@ class ProfileItem extends Component {
         <div className="row">
           <div className="col-2">
             <img src={profile.user.avatar} alt="" className="rounded-circle" />
+          
           </div>
           <div className="col-lg-6 col-md-4 col-8">
             <h3>{profile.user.name}</h3>
@@ -57,7 +61,7 @@ class ProfileItem extends Component {
                 </li>
               ))}
             </ul>
-          
+         
           </div>
          
         </div>
@@ -69,7 +73,7 @@ class ProfileItem extends Component {
 
 ProfileItem.propTypes = {
   profile:propTypes.object.isRequired,
-  auth:propTypes.object.isRequired
+  
 };
 
 

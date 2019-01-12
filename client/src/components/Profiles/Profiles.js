@@ -21,6 +21,7 @@ class Profiles extends Component {
         if(Object.keys(profiles).length>0){
             profileItems=profiles.map(profile=>(
                 <ProfileItems key={profile._id} auth={auth} profile={profile} />
+                // console.log(profile)
             ));
         }
         else{
