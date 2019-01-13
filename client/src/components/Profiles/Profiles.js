@@ -18,11 +18,14 @@ class Profiles extends Component {
         profileItems=<Spinner/>
       }
       else{
+       
         if(Object.keys(profiles).length>0){
             profileItems=profiles.map(profile=>(
+              
                 <ProfileItems key={profile._id} auth={auth} profile={profile} />
                 // console.log(profile)
             ));
+
         }
         else{
             profileItems=<h1>profiles not found...</h1>;
@@ -39,7 +42,7 @@ class Profiles extends Component {
               <h1 className="display-4 text-center">Programmers & Developers</h1>
              
               {profileItems}
-              <i style={{color:"red"}}>Green symbol shows the online developers</i>
+              
               </div>
               </div>
               </div>

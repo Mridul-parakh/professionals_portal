@@ -13,6 +13,12 @@ class Profile extends Component {
     componentDidMount(){
         if(this.props.match.params.handle){
             this.props.getProfileByHandle(this.props.match.params.handle);
+            // if(this.props.auth===undefined){
+            //   this.props.history.push('/dashboard');
+            // }
+        }
+        else{
+          
         }
     }
   render() {

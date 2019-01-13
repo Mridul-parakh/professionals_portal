@@ -50,7 +50,7 @@ changeHandler = (event) => {
     return (<div className="row">
     <div className="col-md-3">
       <h6 style={{color:"red"}}>This chat is hidden for all . U can type anything here there is no restriction.
-         u can release your frustration which u r taken from your college. U can express your feeling too(propose)</h6>
+         u can release your frustration which u r taken from your ...! U can express your feeling too(propose)</h6>
     </div>
     <div className="col-md-9">
               <div className="chat">

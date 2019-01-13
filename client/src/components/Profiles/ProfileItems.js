@@ -5,28 +5,14 @@ import './ProfileItems.css';
 import propTypes from 'prop-types';
 
 class ProfileItem extends Component {
-  constructor(props){
-    super(props);
-    this.state={
-      online:false
-    }
-  }
+ 
   
-  componentDidMount(){
-    if(this.props.auth.isAuthenticated){
-       if(this.props.auth.user.id===this.props.profile.user._id)
-        this.setState({online:true})
-    }
-}
+
 
   render() {
     const  profile  = this.props.profile;
     
-  let online;
-  let k="";
-  if(this.state.online){
-    online=<h1 className='dot'>{k}</h1>
-  }
+
     return (
       <div className="card card-body bg-light mb-3">
         <div className="row">
@@ -65,7 +51,7 @@ class ProfileItem extends Component {
           </div>
          
         </div>
-        { online}
+       
       </div>
     );
   }

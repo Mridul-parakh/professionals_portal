@@ -31,9 +31,11 @@ import {createProfile} from '../../../actions/profileAction';
     this.setState({ [event.target.name]: event.target.value })
 }
    submitHandler=(event) =>{
+     const handle=this.state.handle.trim();
+    //  console.log(handle.trim());
     event.preventDefault();
     const profileData = {
-      handle: this.state.handle,
+      handle: handle,
       company: this.state.company,
       website: this.state.website,
       location: this.state.location,

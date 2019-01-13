@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 mongoose.connect(db,{
-    useNewUrlParser: true
+  useNewUrlParser: true
 })
 .then(() => console.log('MongoDB Connected...'))
   .catch(err => console.log(err));

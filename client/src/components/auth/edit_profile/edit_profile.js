@@ -32,9 +32,11 @@ import isEmpty from '../../../validation/isEmpty';
     this.setState({ [event.target.name]: event.target.value })
 }
    submitHandler(event) {
+    const handle=this.state.handle.trim();
+  
     event.preventDefault();
     const profileData = {
-      handle: this.state.handle,
+      handle:handle,
       company: this.state.company,
       website: this.state.website,
       location: this.state.location,
@@ -50,7 +52,7 @@ import isEmpty from '../../../validation/isEmpty';
     }
     // this.props.registeruser(newUser,this.props.history);
     this.props.createProfile(profileData,this.props.history);
-   console.log(profileData);
+   
  
 }
 componentWillReceiveProps(nextProps){

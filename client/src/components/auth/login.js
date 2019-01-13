@@ -47,6 +47,7 @@ class login extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-8 m-auto">
+                        <i style={{color:"red"}}>(GUIDLINE : This website Only for students...)</i>
                             <h1 className="display-4 text-center">Log In</h1>
                             <p className="lead text-center">Sign in to your DevConnector account</p>
                             <form onSubmit={(e)=>this.submitHandler(e)}>
@@ -74,6 +75,7 @@ class login extends Component {
                     </div>
                 </div>
                 <i style={{color:"red"}}>If u want an profile image then signup in GRAVATAR and upload yr image </i><a href="http://en.gravatar.com/">here</a>
+                
             </div>
         )
     }
